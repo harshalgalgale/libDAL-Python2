@@ -1,23 +1,23 @@
-# Python 2 DALClient library
+#!/usr/bin/env/python
+# -*- coding: utf-8 -*-
+"""
+ * dalclient library - provides utilities to assist in using KDDart-DAL servers
+ * Copyright (C) 2017  Diversity Arrays Technology
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+"""
 
-Python 2.7 interface for DAL. Very similar to the Java DALClient library.
-
-## How to Install
-clone this repo:
-~~~
-git clone https://git.diversityarrays.com/kddart/Python2-DALClient.git
-~~~
-
-Then:
-~~~
-cd Python2-DALClient
-sudo python setup.py install
-~~~
-
-## Example usage:
-(Remember to replace **'YOUR_URL'** with a valid KDDart instance DAL URL)
-(DAL REST documentation, including all commands can be found at: http://www.kddart.org/reference.html)
-~~~
 from diversityarrays.dalclient.DefaultDALClient import DefaultDALClient
 from diversityarrays.dalclient.ResponseType import ResponseType
 from diversityarrays.dalclient.DALResponseVisitor import DALResponseVisitor
@@ -25,6 +25,11 @@ from diversityarrays.dalclient.DALResponseException import DALResponseException
 from diversityarrays.dalclient.DALEntityBuilder import DALEntityBuilder
 import getpass
 import traceback
+
+__author__ = "alexs"
+__copyright__ = "Copyright (C) 2017  Diversity Arrays Technology"
+__license__ = "GPL 3.0"
+__email__ = ""
 
 """
 Below is the example login for DALClient along with some basic commands
@@ -143,9 +148,5 @@ outputFiles = response.output_files
 
 # Download the content. It is returned, or you can specify a file to write the data to
 content = client.download_file(outputFiles[0]["csv"], localFile="./TrialData.csv")
-~~~
 
-See Direcotory: 
-**'Examples'**
-for some more simple examples.
 
