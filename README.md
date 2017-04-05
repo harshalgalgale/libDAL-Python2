@@ -10,7 +10,7 @@ git clone https://github.com/kddart/libDAL-Python2.git
 
 Then:
 ~~~
-cd Python2-DALClient
+cd libDAL-Python2
 sudo python setup.py install
 ~~~
 
