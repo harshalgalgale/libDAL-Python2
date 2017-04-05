@@ -5,7 +5,7 @@ Python 2.7 interface for DAL. Very similar to the Java DALClient library.
 ## How to Install
 clone this repo:
 ~~~
-git clone https://git.diversityarrays.com/kddart/Python2-DALClient.git
+git clone https://github.com/kddart/libDAL-Python2.git
 ~~~
 
 Then:
