@@ -18,6 +18,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
+from DALResponseVisitor import DALResponseVisitor
+
 __author__ = "alexs"
 __copyright__ = "Copyright (C) 2017  Diversity Arrays Technology"
 __license__ = "GPL 3.0"
@@ -36,6 +38,7 @@ class DALResponse(object):
         self._translationMap = translationMap
         self.output_files = []
         self.returned_ids = []
+        self._default_visitor = DALResponseVisitor(None)
 
     def add_response_record(self, responseRecord):
         """
@@ -114,3 +117,9 @@ class DALResponse(object):
         :return:
         """
         return self._data
+
+    def list_entities(self):
+        """
+        :return:
+        """
+        return [self._default_visitor.get_visit_entity(data) for data in self._data]
